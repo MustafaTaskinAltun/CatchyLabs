@@ -1,2 +1,0 @@
-file:src/test/resources/features/login.feature:4:9
-file:src/test/resources/features/editAccount.feature:5

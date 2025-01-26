@@ -32,6 +32,7 @@ public class CatchylabsStepDefinition {
     public void kullaniciUsernameOrPasswordInvalidHatasiniAldiginiGorur() {
         Assert.assertTrue(catchylabsPage.UsernameorPasswordInvalidText.getText().contains("Username or Password Invalid!"));
         ReusableMethods.bekle(3);
+        Driver.closeDriver();
     }
 
     @Then("kullanici valid user ve valid password ile girer")
@@ -48,6 +49,7 @@ public class CatchylabsStepDefinition {
     public void sayfaBasligininAppsOlarakGeldigiGorulur() {
         Assert.assertTrue(Driver.getDriver().getTitle().contains("apps"));
         ReusableMethods.bekle(3);
+        //Driver.closeDriver();
     }
 
 
@@ -85,6 +87,7 @@ public class CatchylabsStepDefinition {
     @And("hata almadan gectigini gorur")
     public void hataAlmadanGectiginiGorur() {
         Assert.assertTrue(catchylabsPage.AccountNameDogrulama.getText().contains("12345"));
+        Driver.closeDriver();
     }
 
     @And("kullanici account name alanina space tusu ile bosluk karakteri girer ve update e tiklar")
@@ -104,6 +107,7 @@ public class CatchylabsStepDefinition {
     public void kulaniciHataAlmadanGectiginiGorur() {
 
         Assert.assertTrue(catchylabsPage.AccountSpaceNameDogrulama.isDisplayed());
+        Driver.closeDriver();
     }
 
     @And("kullanici account name special karakter girer ve update e tiklar")

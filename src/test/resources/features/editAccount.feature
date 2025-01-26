@@ -1,4 +1,4 @@
-@login
+@editaccount
 Feature: Edit Account
 
 
